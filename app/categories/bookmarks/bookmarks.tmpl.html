@@ -1,0 +1,8 @@
+<h1>{{currentCategoryName}}</h1>
+<ul class="nav nav-sidebar">
+  <li ng-repeat="bookmark in bookmarks | filter: {category: currentCategory.name} " ng-class="{'active': isSelectedBookmark(bookmark.id)}">
+    <a>
+      {{bookmark.title}}
+    </a>
+  </li>
+</ul>
